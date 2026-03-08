@@ -1,0 +1,119 @@
+[gd_scene load_steps=2 format=3 uid="uid://crx5rjikhjvdv"]
+
+[ext_resource type="Script" path="res://scripts/intro_level.gd" id="1_3h8x4"]
+
+[node name="IntroLevel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3h8x4")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0509804, 0.0392157, 0.0627451, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -320.0
+offset_top = 24.0
+offset_right = 320.0
+offset_bottom = 76.0
+theme_override_font_sizes/font_size = 38
+horizontal_alignment = 1
+text = "亡者峡谷：深渊初燃"
+
+[node name="BattleLog" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = 104.0
+offset_right = -64.0
+offset_bottom = -206.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = ""
+fit_content = true
+scroll_active = true
+
+[node name="Status" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = -182.0
+offset_right = -64.0
+offset_bottom = -120.0
+alignment = 1
+
+[node name="PlayerHP" type="Label" parent="Status"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 26
+text = "莱纳 HP: 100"
+
+[node name="EnemyHP" type="Label" parent="Status"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 26
+horizontal_alignment = 2
+text = "污染幼龙 HP: 120"
+
+[node name="Actions" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = -108.0
+offset_right = -64.0
+offset_bottom = -42.0
+alignment = 1
+theme_override_constants/separation = 20
+
+[node name="AttackButton" type="Button" parent="Actions"]
+layout_mode = 2
+custom_minimum_size = Vector2(220, 56)
+theme_override_font_sizes/font_size = 24
+text = "斩击"
+
+[node name="GuardButton" type="Button" parent="Actions"]
+layout_mode = 2
+custom_minimum_size = Vector2(220, 56)
+theme_override_font_sizes/font_size = 24
+text = "格挡"
+
+[node name="PurgeButton" type="Button" parent="Actions"]
+layout_mode = 2
+custom_minimum_size = Vector2(220, 56)
+theme_override_font_sizes/font_size = 24
+text = "净蚀誓言"
+
+[node name="Hint" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = -34.0
+offset_right = -64.0
+offset_bottom = -8.0
+horizontal_alignment = 1
+text = "战斗胜利后将解锁开场故事真相。"
