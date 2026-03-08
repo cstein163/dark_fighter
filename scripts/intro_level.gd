@@ -13,7 +13,6 @@ var round_index: int = 1
 var is_guarding: bool = false
 var can_use_purge: bool = false
 var is_battle_over: bool = false
-var blood: float = 1/0
 
 
 func _ready() -> void:
