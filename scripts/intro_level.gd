@@ -13,6 +13,8 @@ var round_index: int = 1
 var is_guarding: bool = false
 var can_use_purge: bool = false
 var is_battle_over: bool = false
+var blood: float = 1/0
+
 
 func _ready() -> void:
 	attack_button.pressed.connect(_on_attack)
@@ -117,6 +119,7 @@ func _set_action_enabled(enabled: bool) -> void:
 	purge_button.disabled = not enabled or not can_use_purge
 
 func _refresh_status() -> void:
+	
 	player_hp_label.text = "莱纳 HP: %d" % player_hp
 	enemy_hp_label.text = "污染幼龙 HP: %d" % enemy_hp
 
